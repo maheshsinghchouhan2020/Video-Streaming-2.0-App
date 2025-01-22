@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #151522;
+}
+
+/* Padding classes */
+.px {
+  @apply px-px;
+}
+
+.py {
+  @apply py-py;
+}
+
+.px-small-screen {
+  @apply px-small_screens;
+}
+
+/* Text size classes */
+.h1 {
+  @apply text-h1;
+}
+
+.h2 {
+  @apply text-h2;
+}
+
+.h3 {
+  @apply text-h3;
+}
+
+.h4 {
+  @apply text-h4;
+}
+
+.h5 {
+  @apply text-h5;
+}
+
+.h6 {
+  @apply text-h6;
+}
+
+.h7 {
+  @apply text-h7;
+}
+@layer components {
+  /* Custom container with max-widths */
+  .custom-container {
+    @apply w-full max-w-full 
+      sm:max-w-screen-sm 
+      md:max-w-screen-md 
+      lg:max-w-screen-lg 
+      xl:max-w-screen-xl 
+      2xl:max-w-screen-2xl 
+      mx-auto;
+  }
+}
+
+/* Tailwind style override */
+.slick-dots li button:before {
+  @apply text-white !important;
+}
+
+/* Active dot */
+.slick-dots li.slick-active button:before {
+  @apply text-white !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+  height: 100%; /* Ensure full height is applied to prevent scrolling */
+}
+
+.scrollable-range::-webkit-scrollbar {
+  height: 2px;
+}
+
+.scrollable-range::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 1px;
+}
+
+.scrollable-range::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+.scrollable-range::-webkit-scrollbar-track {
+  /* background: #1f2937; */
+  border-radius: 1px;
+}
